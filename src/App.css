@@ -1,0 +1,125 @@
+:root {
+  --black: #080808;
+  --white: #E3F0D3;
+  --red: #ED2224;
+  --blue: #31ADE3;
+  --green: #71C389;
+  --orange: #F1A51F;
+}
+
+.orbitron-regular {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.orbitron-bold {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.micro-5 {
+  font-family: "Micro 5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--black);
+}
+
+.welcome-image {
+  position: Fixed; /* Position the image normally but allow layering */
+  z-index: 2; /* Place the image above the logo */
+  top: 135px;
+  height: 500px;
+  right: 0px;
+}
+.welcome-logo {
+  position: Fixed; /* Position it relative to the container */
+  top: 520px;
+  left: 0;
+  width: 100%; /* Stretch the logo across the container */
+  height: 80px;
+  z-index: 1; /* Place it behind the cover image */
+  transform: scaleX(-1); /* Flip the image horizontally */
+}
+
+.serve-logo {
+  position: Fixed; /* Position it relative to the container */
+  top: 150px; /* Move the image to the vertical center */
+  left: 50%; /* Move the image to the horizontal center */
+  transform: translate(-50%, -50%); /* Offset the image's position by half its own dimensions */
+  width: auto; /* Adjust the width as needed */
+  height: 40px; /* Fixed height */
+  z-index: 1; /* Place it behind other elements if needed */
+}
+
+.levelup {
+  position: Fixed; /* Position it relative to the container */
+  top: 200px; /* Move the image to the vertical center */
+  left: 90px;
+  width: auto;
+  height: 230px;
+  z-index: 1; /* Place it behind other elements if needed */
+}
+
+.pill-button {
+  position: Fixed; /* Position it relative to the container */
+  top: 440px; /* Adjust to place it directly under the levelup image */
+  left: 90px; /* Align it with the levelup image */
+  padding: 10px 25px; /* Adjust padding as needed */
+  background-color: var(--red); /* Red background */
+  color: var(--white); /* White text */
+  border: none;
+  height: 50px;
+  border-radius: 50px; /* Rounded pill shape */
+  font-size: 30px; /* Adjust font size as needed */
+  font-family: "Micro 5", sans-serif;
+  font-weight: 300;
+  display: flex; /* Use flex for alignment */
+  align-items: center; /* Center content vertically */
+  gap: 10px; /* Add space between text and image */
+  z-index: 2; /* Make sure it's above other elements */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.pill-button img {
+  width: 30px; /* Adjust the size of the image */
+  height: 20px; /* Ensure the image is a square */
+}
+
+.pill-button:hover {
+  background-color: darkred; /* Darker red on hover */
+}
+
+
+.stars {
+  position: Fixed; /* Position it relative to the parent container */
+  top: 0; /* Start at the top of the container */
+  left: 0; /* Start at the left of the container */
+  width: 100%; /* Cover the full width of the container */
+  height: 100%; /* Cover the full height of the container */
+  z-index: -1; /* Place it behind all other elements within the parent */
+  object-fit: cover; /* Ensure the image scales proportionally */
+}
+
+.blink-animation {
+  animation: blink 2s linear infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}

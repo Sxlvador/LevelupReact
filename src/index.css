@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Orbitron Regular";
+  src: local("Orbitron");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Orbitron Bold";
+  src: local("Orbitron");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Micro 5";
+  src: url("/public/assets/fonts/micro5/Micro5-Regular.ttf");
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
